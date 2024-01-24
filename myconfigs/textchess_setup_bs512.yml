@@ -1,0 +1,24 @@
+# Suggested data paths when using GPT-NeoX locally
+{
+  # or for weighted datasets:
+  "train-data-paths": ["/mnt/nfs/Users/lfsm/game_master/chess_text_document", "/mnt/nfs/Users/lfsm/SlimPajama-6B/slp_6b_text_document"],
+  "test-data-paths": ["/mnt/nfs/Users/lfsm/game_master/chess_text_document", "/mnt/nfs/Users/lfsm/SlimPajama-6B/slp_6b_text_document"],
+  "valid-data-paths": ["/mnt/nfs/Users/lfsm/game_master/chess_text_document", "/mnt/nfs/Users/lfsm/SlimPajama-6B/slp_6b_text_document"],
+  "train-data-weights": [0.5, 0.5],
+  "test-data-weights": [0.5, 0.5],
+  "valid-data-weights": [0.5, 0.5],
+
+  # "save": "checkpoints/text_chess_bs1024",
+  # "load": "checkpoints/text_chess_bs1024",
+  "save": "checkpoints/text_chess_bs512",
+  "load": "checkpoints/text_chess_bs512",
+  "checkpoint_validation_with_forward_pass": False,
+
+  # "tensorboard_dir": "tensorboard",
+  "log_dir": "logs",
+  
+  "use_wandb": True,
+
+  "wandb_host": "https://api.wandb.ai",
+  "wandb_project": "reason&plan"
+}

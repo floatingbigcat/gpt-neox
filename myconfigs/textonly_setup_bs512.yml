@@ -1,0 +1,16 @@
+# Suggested data paths when using GPT-NeoX locally
+{
+  "data_path": "/mnt/nfs/Users/lfsm/SlimPajama-6B/slp_6b_text_document",
+
+  "save": "checkpoints/text_only_bs512",
+  "load": "checkpoints/text_only_bs512",
+  "checkpoint_validation_with_forward_pass": False,
+
+  # "tensorboard_dir": "tensorboard",
+  "log_dir": "logs",
+  
+  "use_wandb": True,
+
+  "wandb_host": "https://api.wandb.ai",
+  "wandb_project": "reason&plan"
+}
