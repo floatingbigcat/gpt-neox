@@ -1,14 +1,4 @@
 #!/bin/bash
-#YBATCH -r  am4_1
-#SBATCH -N 1
-#SBATCH -o ./proces%j.out
-#SBATCH --time=72:00:00
-#SBATCH -J preproces
-#SBATCH --error ./proces%j.err
-
-source activate
-conda deactivate
-conda activate base
 
 folder='/mnt/nfs/Users/lfsm/chess/mix_template_jsonl'
 # cp -r $folder $HINADORI_LOCAL_SCRATCH
