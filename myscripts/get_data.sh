@@ -1,8 +1,7 @@
 #!/bin/bash
 
 folder='/mnt/nfs/Users/lfsm/chess/jsonl'
-cp -r $folder $HINADORI_LOCAL_SCRATCH
-files=$(find $HINADORI_LOCAL_SCRATCH/jsonl -type f -printf "%p,")
+files=$(find $folder/jsonl -type f -printf "%p,")
 files=${files%,}  # Remove the trailing comma
 python tools/preprocess_data.py \
             --input $files \
@@ -14,8 +13,7 @@ python tools/preprocess_data.py \
             --workers 64 
 
 folder='/mnt/nfs/Users/lfsm/SlimPajama-6B/jsonl'
-cp -r $folder $HINADORI_LOCAL_SCRATCH
-files=$(find $HINADORI_LOCAL_SCRATCH/jsonl -type f -printf "%p,")
+files=$(find $folder/jsonl -type f -printf "%p,")
 files=${files%,}  # Remove the trailing comma
 python tools/preprocess_data.py \
             --input $files \
