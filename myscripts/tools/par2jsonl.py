@@ -12,6 +12,7 @@ for input_path in os.listdir(input_dir):
     jsonl_file = os.path.join(out_dir,name).replace('parquet','jsonl')
     input_path = os.path.join(input_dir,input_path)
     df = pd.read_parquet(input_path)
+    
     with jsonlines.open(jsonl_file, 'w') as writer:
         for index, row in tqdm(df.iterrows()):
             json_obj = {'text':row['text']}
